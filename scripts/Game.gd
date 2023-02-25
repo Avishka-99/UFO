@@ -20,6 +20,7 @@ func _spawnRoad():
 	preFloor=currentFlorr
 	add_child(currentFlorr)
 	floorCount+=1
+	print(floorCount)
 	#print(currentFlorr.global_translation)
 	#print(florrArray)
 func _spawnFloor():
