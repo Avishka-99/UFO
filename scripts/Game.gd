@@ -8,10 +8,10 @@ var ufo=null
 var floorCount=0
 var buildingCount=0
 onready var Road = preload("res://scenes/Road.tscn")
-onready var UFOscene = preload("res://scenes/myship.tscn")
+onready var UFOscene = preload("res://scenes/Car.tscn")
 onready var Floorscene = preload("res://scenes/Ground.tscn")
 onready var area = $Area
-var sceneArray =[preload("res://scenes/Building1.tscn"),preload("res://scenes/Building2.tscn"),preload("res://scenes/Building3.tscn"),preload("res://scenes/Building4.tscn")]
+var sceneArray =[preload("res://scenes/Building1.tscn"),preload("res://scenes/Building2.tscn"),preload("res://scenes/Building3.tscn"),preload("res://scenes/Building4.tscn"),preload("res://scenes/Building5.tscn")]
 
 func _spawnRoad():
 	randomize()
@@ -44,21 +44,21 @@ func _ready():
 	_spawnFloor()
 	_spawnBuilding()
 	floorCount+=1
-	for x in range(20):
+	for x in range(25):
 		_spawnRoad()
 		_spawnFloor()
 		_spawnBuilding()
 	_spawnUFO()
 	
 	area.get_parent().remove_child(area)
-	var newParent = get_node("myship")
+	var newParent = get_node("Car")
 	newParent.add_child(area)
 	#print(preFloor.global_transform.origin)
 	#print(preFloor.get_node("edge").global_transform.origin)
 
 func _spawnUFO():
 	ufo = UFOscene.instance()
-	#ufo.translation=Vector3(0,-0.225,0)
+	ufo.translation=Vector3(0,1,0)
 	add_child(ufo)
 	
 func _process(delta):

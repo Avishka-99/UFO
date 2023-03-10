@@ -36,9 +36,10 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/filters/sharpen_intensity=0.325
+quality/filters/sharpen_intensity=1.0
 quality/shading/force_vertex_shading.mobile=false
 quality/filters/anisotropic_filter_level=16
+quality/subsurface_scattering/quality=2
 quality/filters/msaa=4
 quality/filters/use_fxaa=true
 quality/filters/use_debanding=true
