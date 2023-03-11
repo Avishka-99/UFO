@@ -313,12 +313,14 @@ shape = SubResource( 12 )
 
 [node name="First" type="Camera" parent="."]
 transform = Transform( -1.32831e-07, 1.36997, -3.0388, 5.98836e-08, 3.0388, 1.36997, 3.33333, -1.95399e-13, -1.45705e-07, 91.8731, 44.1544, 0 )
+current = true
 
 [node name="Second" type="Camera" parent="."]
 transform = Transform( -3.33333, -4.85628e-05, -0.00174464, 2.91295e-07, 3.33203, -0.0933047, 0.00174532, -0.0933047, -3.33203, -0.0351274, 6.1456, -68.5582 )
 current = true
 
 [node name="Camera" type="Camera" parent="."]
+transform = Transform( 3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, 0 )
 
 [node name="Tween" type="Tween" parent="."]
 
