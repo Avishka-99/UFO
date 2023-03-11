@@ -10,6 +10,7 @@ var velocity = Vector3(20,0,0)
 func _ready():
 	transition_camera3D($Second,$First,2)
 	#$Timer.start(5)
+	pass
 func _physics_process(delta):
 	velocity += gravity * delta
 	#get_input(delta)
